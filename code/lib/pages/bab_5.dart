@@ -65,50 +65,40 @@
 //   }
 // }
 
-// lib/main.dart
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(
-    MaterialApp(
-      home: const Bab5(), // Halaman awal aplikasi
-      routes: {
-        // Mendefinisikan named routes
-        '/second': (context) => const SecondScreenNamed(),
-        '/third': (context) => const ThirdScreenNamed(), // Contoh rute lain
-      },
-    ),
-  );
-}
-
-// Halaman Pertama (HomeScreen)
+// Halaman Pertama
 class Bab5 extends StatelessWidget {
   const Bab5({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Halaman Utama (Named Routes)'),
-
-        backgroundColor: Colors.blueAccent,
+        title: const Text('Halaman Utama'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-              child: const Text('Pergi ke Halaman Kedua'),
               onPressed: () {
-                // Berpindah menggunakan named route
-                Navigator.pushNamed(context, '/second');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const SecondScreenNamed()),
+                );
               },
+              child: const Text('Pergi ke Halaman Kedua'),
             ),
             const SizedBox(height: 10),
             ElevatedButton(
-              child: const Text('Pergi ke Halaman Ketiga'),
               onPressed: () {
-                Navigator.pushNamed(context, '/third');
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const ThirdScreenNamed()),
+                );
               },
+              child: const Text('Pergi ke Halaman Ketiga'),
             ),
           ],
         ),
@@ -117,7 +107,7 @@ class Bab5 extends StatelessWidget {
   }
 }
 
-// Halaman Kedua (SecondScreenNamed)
+// Halaman Kedua
 class SecondScreenNamed extends StatelessWidget {
   const SecondScreenNamed({super.key});
 
@@ -125,22 +115,21 @@ class SecondScreenNamed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Halaman Kedua (Named)'),
-        backgroundColor: Colors.greenAccent,
+        title: const Text('Halaman Kedua'),
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Kembali'),
           onPressed: () {
             Navigator.pop(context);
           },
+          child: const Text('Kembali'),
         ),
       ),
     );
   }
 }
 
-// Halaman Ketiga (ThirdScreenNamed)
+// Halaman Ketiga
 class ThirdScreenNamed extends StatelessWidget {
   const ThirdScreenNamed({super.key});
 
@@ -148,15 +137,14 @@ class ThirdScreenNamed extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Halaman Ketiga (Named)'),
-        backgroundColor: Colors.orangeAccent,
+        title: const Text('Halaman Ketiga'),
       ),
       body: Center(
         child: ElevatedButton(
-          child: const Text('Kembali'),
           onPressed: () {
             Navigator.pop(context);
           },
+          child: const Text('Kembali'),
         ),
       ),
     );
