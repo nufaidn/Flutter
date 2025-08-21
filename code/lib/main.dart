@@ -22,7 +22,12 @@ class MyApp extends StatelessWidget {
         '/bab3': (context) => const Bab3(),
         '/bab4': (context) => const Bab4(),
         '/bab5': (context) => const Bab5(),
+<<<<<<< HEAD
         '/bab6': (context) => Bab6(),
+=======
+        '/bab6': (context) => const Bab6(),
+        // '/detailWithArgs': (context) => const DetailScreenWithArgs(), // ✅ tambahkan ini, hanya untuk via argument (names route)
+>>>>>>> 7a54a72c0811edaa727c673bdf8845cd6e08035d
       },
     );
   }
