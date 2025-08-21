@@ -1,4 +1,6 @@
+import 'package:code/pages/bab_7.dart';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 import 'pages/bab_2.dart';
 import 'pages/bab_3.dart';
 import 'pages/bab_4.dart';
@@ -22,12 +24,9 @@ class MyApp extends StatelessWidget {
         '/bab3': (context) => const Bab3(),
         '/bab4': (context) => const Bab4(),
         '/bab5': (context) => const Bab5(),
-<<<<<<< HEAD
         '/bab6': (context) => Bab6(),
-=======
-        '/bab6': (context) => const Bab6(),
+        '/bab7': (context) => const Bab7(),
         // '/detailWithArgs': (context) => const DetailScreenWithArgs(), // ✅ tambahkan ini, hanya untuk via argument (names route)
->>>>>>> 7a54a72c0811edaa727c673bdf8845cd6e08035d
       },
     );
   }
