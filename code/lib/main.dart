@@ -1,4 +1,5 @@
 import 'package:code/pages/bab_7.dart';
+import 'package:code/pages/bab_8.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'pages/bab_2.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/bab5': (context) => const Bab5(),
         '/bab6': (context) => Bab6(),
         '/bab7': (context) => const Bab7(),
+        '/bab8': (context) => const Bab8(),
         // '/detailWithArgs': (context) => const DetailScreenWithArgs(), // ✅ tambahkan ini, hanya untuk via argument (names route)
       },
     );
