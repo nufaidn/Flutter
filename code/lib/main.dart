@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Learning App',
+      debugShowCheckedModeBanner: false,
       initialRoute: '/bab2',
       routes: {
         '/bab2': (context) => const Bab2(),
