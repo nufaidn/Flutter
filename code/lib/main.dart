@@ -1,12 +1,13 @@
-import 'package:code/pages/bab_7.dart';
-import 'package:code/pages/bab_8.dart';
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:get/get.dart';
 import 'pages/bab_2.dart';
 import 'pages/bab_3.dart';
 import 'pages/bab_4.dart';
 import 'pages/bab_5.dart';
 import 'pages/bab_6.dart';
+import 'pages/bab_7.dart';
+import 'pages/bab_8.dart';
+import 'pages/bab_9.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,20 +18,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Learning App',
       debugShowCheckedModeBanner: false,
-      initialRoute: '/bab2',
-      routes: {
-        '/bab2': (context) => const Bab2(),
-        '/bab3': (context) => const Bab3(),
-        '/bab4': (context) => const Bab4(),
-        '/bab5': (context) => const Bab5(),
-        '/bab6': (context) => Bab6(),
-        '/bab7': (context) => const Bab7(),
-        '/bab8': (context) => const Bab8(),
-        // '/detailWithArgs': (context) => const DetailScreenWithArgs(), // ✅ tambahkan ini, hanya untuk via argument (names route)
-      },
+      initialRoute: '/bab9',
+      getPages: [
+        GetPage(name: '/bab2', page: () => const Bab2()),
+        GetPage(name: '/bab3', page: () => const Bab3()),
+        GetPage(name: '/bab4', page: () => const Bab4()),
+        GetPage(name: '/bab5', page: () => const Bab5()),
+        GetPage(name: '/bab6', page: () => Bab6()),
+        GetPage(name: '/bab7', page: () => const Bab7()),
+        GetPage(name: '/bab8', page: () => const Bab8()),
+        GetPage(name: '/bab9', page: () => const Bab9()),
+      ],
     );
   }
 }

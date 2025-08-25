@@ -13,7 +13,7 @@ class Bab2 extends StatelessWidget {
       ),
       body: Center(
         child: Text(
-          'Nufail \nKelas XI RPL',
+          'Nufail & Khaizuran \nKelas XI RPL',
           textAlign: TextAlign.center,
           style: 
           TextStyle(
